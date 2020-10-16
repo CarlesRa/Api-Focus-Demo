@@ -1,5 +1,5 @@
 export enum ContactType {
 	Amistad = "Amistad",
-	Trabajador = "Trabajador",
+	Trabajador = "Empleado",
 	Cliente = "Cliente"
 }

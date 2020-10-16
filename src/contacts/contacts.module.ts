@@ -6,7 +6,6 @@ import { Contact } from './model/contact.entity';
 import { EmailController } from './controllers/email/email.controller';
 import { EmailService } from './services/email/email.service';
 
-
 @Module({
 	imports:[
 		TypeOrmModule.forFeature([Contact])

@@ -47,7 +47,7 @@ export class ContactsController {
 		return await this.contactsService.update(contactData);
 	}
 
-	@Delete('delete:id')
+	@Delete('delete/:id')
 	async delete(@Param('id') id): Promise<any> {
 
 		return await this.contactsService.delete(id);
