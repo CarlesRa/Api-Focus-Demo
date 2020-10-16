@@ -4,6 +4,5 @@ export class Email {
 	from: string;
 	subject: string;
 	text: string;
-	html: string;
 
 }

@@ -14,7 +14,6 @@ export class EmailService {
 				from: email.from,
 				subject: email.subject,
 				text: email.text,
-				html: email.html
 			});
 	} 
 }
