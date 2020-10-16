@@ -9,7 +9,7 @@ async function bootstrap() {
 
 	const options = new DocumentBuilder()
     .setTitle('Focus-Demo')
-    .setDescription('Api para demo en Focus360')
+    .setDescription('Api para demo en Focus360º')
     .setVersion('0.1')
     .addTag('contacts')
 		.build();
