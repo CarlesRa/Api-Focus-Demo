@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ContactType } from 'src/contacts/enums/type.enum';
 import { Contact } from 'src/contacts/model/contact.entity';
 import { ContactsService } from 'src/contacts/services/contacts/contacts.service';
@@ -19,6 +19,11 @@ export class ContactsController {
 	async getFriends(): Promise<Contact[]> {
 
 		return await this.contactsService.getContactsByType(ContactType.Amistad);
+	}
+
+	@Get('contact/:id')
+	async getContactById(@Param('id') id) {
+		return await this.contactsService.getContactById(id);
 	}
 
 	@Get('employees')
@@ -48,7 +53,7 @@ export class ContactsController {
 	}
 
 	@Delete('delete/:id')
-	async delete(@Param('id') id): Promise<any> {
+	async delete(@Param('id') id: string): Promise<any> {
 
 		return await this.contactsService.delete(id);
 	}

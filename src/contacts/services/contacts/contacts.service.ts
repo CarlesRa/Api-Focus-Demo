@@ -1,5 +1,6 @@
 import { Injectable, Param } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { identity } from 'rxjs';
 import { Contact } from 'src/contacts/model/contact.entity';
 import { DeleteResult, getConnection, Repository } from 'typeorm';
 
@@ -16,7 +17,7 @@ export class ContactsService {
 		return await this.contactRepository.find();
 	}
 
-	async getContactsByType(@Param('type') type: string) {
+	async getContactsByType(@Param('type') type: string): Promise<Contact[]> {
 		
 		return await getConnection().
 			createQueryBuilder().
@@ -24,6 +25,15 @@ export class ContactsService {
 			from(Contact, 'contact').
 			where("contact.contactType = :contactType", { contactType: type}).
 			getMany();
+	}
+
+	async getContactById(@Param('id') id: any) {
+		return await getConnection().
+			createQueryBuilder().
+			select('contact').
+			from(Contact, 'contact').
+			where("contact.id = :id", { id: id}).
+			getOne();
 	}
 
 	async create(contact: Contact): Promise<Contact> {
