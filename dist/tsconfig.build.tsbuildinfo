@@ -2487,7 +2487,7 @@
         "affectsGlobalScope": false
       },
       "../src/contacts/controllers/contacts/contacts.controller.ts": {
-        "version": "486da37bb4bebc3cb2abda25ab3f1e89b1fcedca232043325dcc3c71b7cdf69c",
+        "version": "223bd94e8d53885d2e0a487dcce605adabfe8d1900d6973b73c2537d4167ec88",
         "signature": "6b89539f735cc49872063fd05bc9005905a9dddc82c0ffae8c35e1b2e2ddb7b1",
         "affectsGlobalScope": false
       },

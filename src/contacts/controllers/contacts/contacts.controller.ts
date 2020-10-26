@@ -10,7 +10,7 @@ export class ContactsController {
 		private contactsService: ContactsService
 	){}
 
-	@Get()
+	@Get('/')
 	async index(): Promise<Contact[]> {
 		return await this.contactsService.getAll();
 	}
