@@ -1,4 +1,4 @@
-/* import { Test, TestingModule } from '@nestjs/testing';
+import { Test, TestingModule } from '@nestjs/testing';
 import { ContactsController } from './contacts.controller';
 
 describe('ContactsController', () => {
@@ -16,4 +16,3 @@ describe('ContactsController', () => {
     expect(controller).toBeDefined();
   });
 });
- */
