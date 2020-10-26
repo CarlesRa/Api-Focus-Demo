@@ -57,4 +57,5 @@ export class ContactsController {
 
 		return await this.contactsService.delete(id);
 	}
+	//other Methods
 }
