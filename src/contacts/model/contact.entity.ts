@@ -10,7 +10,7 @@ export class Contact {
 	@Column()
 	firstName: string;
 
-	@Column()
+	@Column({nullable: true})
 	lastName: string;
 
 	@Column()
@@ -19,10 +19,10 @@ export class Contact {
 	@Column()
 	phone: string;
 
-	@Column()
+	@Column({nullable: true})
 	city: string;
 
-	@Column()
+	@Column({nullable: true})
 	country: string;
 
 	@Column()
