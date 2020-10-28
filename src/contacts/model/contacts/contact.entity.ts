@@ -1,5 +1,5 @@
+import { ContactType } from "src/contacts/enums/type.enum";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { ContactType } from "../enums/type.enum";
 
 @Entity()
 export class Contact {

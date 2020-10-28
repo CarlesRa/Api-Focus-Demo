@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ContactType } from 'src/contacts/enums/type.enum';
-import { Contact } from 'src/contacts/model/contact.entity';
+import { Contact } from 'src/contacts/model/contacts/contact.entity';
 import { ContactsService } from 'src/contacts/services/contacts/contacts.service';
 
 @Controller('contacts')

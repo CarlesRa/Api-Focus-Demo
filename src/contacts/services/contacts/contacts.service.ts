@@ -1,6 +1,6 @@
 import { Injectable, Param } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Contact } from 'src/contacts/model/contact.entity';
+import { Contact } from 'src/contacts/model/contacts/contact.entity';
 
 import { DeleteResult, getConnection, Repository } from 'typeorm';
 
